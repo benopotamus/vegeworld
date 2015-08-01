@@ -1,0 +1,152 @@
+.template,
+.setup-animal .body,
+.setup-animal .date {
+	display:none;}
+
+
+button {
+	padding: 10px;
+	
+	border-radius: 2px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+	background-color: #925737;
+	background-color: #864C2C;
+	
+	border: none;
+	color: white;
+	min-width: 160px;
+	height:50px;
+	font-size: 1.1em;
+	
+	}
+.bottom-button-row {
+	margin-top: 30px;}
+.next-button {
+	float:right;}
+button.square {
+	min-width:0px;
+	padding:0px;
+	width: 50px;
+	height: 50px;}
+.toggle-visibility {
+	font-size:1.8em; }
+.toggle-visibility i {
+    -moz-transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear; }
+
+.toggle-visibility.collapse i {
+    -ms-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg); }
+	
+
+button.pressed {
+	box-shadow: none;
+	position: relative;
+	left: -1px;
+	bottom: -1px;}
+
+
+body {
+	/*background-image: url(../images/field.jpg);
+	background-color: rgb(106,225,34);*/
+	background-color: #6FBF3F;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.2em; }
+	
+.config-route {
+	margin:0 auto;
+	max-width: 500px;
+	padding: 30px;
+	background-color: rgba(255, 255, 255, 0.85);
+	overflow:auto; /* so Next buttons stay within the box */}
+
+.date-choice-type {
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 5px 0px;
+    display: block;
+    background-color: white;
+    overflow: auto;}
+.date-choice-type .fields {
+	padding-left: 5px;}
+.date-choice-type .fields,
+.date-choice-type > input {
+	float:left;}
+
+.setup-animal {
+	/*border:1px solid #aaa;
+	border-radius:5px;
+	padding:15px;
+	margin:25px;*/
+	
+	
+	border-radius: 2px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+	background-color: white;
+	padding: 30px;
+	margin-bottom: 15px;
+	
+	
+	}
+.setup-animal h2 {
+	font-size:2.2rem;
+	margin:0px;}
+.setup-animal .title {
+	margin-bottom:15px;
+	overflow:auto; /* Title image is being floated and was sitting outside .title div */}
+.setup-animal .title img {
+	width:80px;
+	height:80px;
+	float: left;
+	margin-right: 10px;}
+.setup-animal .toggle-visibility {
+	float:right;}
+
+
+.setup-animal .bits-block {
+	clear: both;
+	margin: 30px 0px;}
+
+.add-minus-buttons {
+	float:right;}
+	
+	
+	
+.animal-pic{
+	width:30px;
+	height:30px;
+	padding:10px;}
+	
+.type-image {
+	width:35px;
+	height:35px;
+	vertical-align:middle;
+	margin-right:5px;}
+.total .type-image {
+	width:20px;
+	height:20px;}
+	
+.total {
+	border-top: 1px solid grey;
+	margin-top: 15px;
+	padding-top: 15px;
+	min-height:30px; /* Prevent total area from jumping when first item is added - ideally it would jump but would be animated to grow box downwards */}
+
+
+@media (max-width: 640px) {
+	body {
+		margin:0px;}
+	.config-route {
+	    min-height: 100%;
+		padding: 10px;}
+	.date-choice-type .fields {
+		max-width: 80%; }
+	.setup-animal {
+		padding: 10px;}
+	.setup-animal .title img {
+		float:none;}
+}

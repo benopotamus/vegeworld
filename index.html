@@ -1,0 +1,110 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	
+	<link rel='stylesheet' type='text/css' href='css/common.css'>
+	
+	<script type='text/javascript' src='libs/jquery.min.js'></script>
+	<script src='http://cdn.html5quintus.com/v0.2.0/quintus-all.js'></script>
+	
+	<script type='text/javascript' src='js/index.html.js'></script>
+	<script type='text/javascript' src='js/world.js'></script>
+</head>
+
+<body>
+	
+<div class='config-route' route='welcome' default-route>
+	<h1>Welcome to vege animal world!</h1>
+	<p>A world of all the animals you haven't eaten.</p>
+	<div class='bottom-button-row'><button route-to='date-stopped' class='next-button'>Start</button></div>
+</div>
+	
+<div class='config-route' route='date-stopped'>
+	<h1>Date you stopped eating animals</h1>
+	
+	<label for='date-stopped-radio-same' class='date-choice-type'>
+		<input type='radio' name='date-stopped-radio' value='same' id='date-stopped-radio-same'>
+		<div class='fields'>
+			From this date
+			<br><br>
+			<input type='date' placeholder='dd/mm/yyyy' id='all_animals_from_date' selected>
+		</div>
+	</label>
+	
+	<label class='date-choice-type' for='date-stopped-radio-different'>
+		<input type='radio' name='date-stopped-radio' value='different' id='date-stopped-radio-different'>
+		<div class='fields'>
+			Different dates for different animals
+		</div>
+	</label>
+	
+	<!--<div class='date-choice-type'>
+		<label>I've never eaten animals</label>
+		<input type='radio' name='date-stopped-radio'>
+	</div>-->
+	
+	<div class='bottom-button-row'><button route-to='animal-weights' class='next-button'>Next</button></div>
+</div>
+
+<div class='config-route' route='animal-weights'>
+	<h1>Amount eaten per week</h1>
+	<div id='animal-configs'></div>
+
+	<div class='bottom-button-row'><button route-to='world' id='tmp-toworld' class='next-button'>Create world!</button></div>
+</div>
+
+<div class='config-route' route='born-vego'>
+	<h1>Never eaten meat</h1>
+	<p>Because you've never eaten animals, select your country and your birth year and this app will work out how much the average person in your country would have eaten over that time.</p>
+	
+	<select>
+		<option>Choose country</option>
+	</select>
+	
+	<select>
+		<option>Choose birth year</option>
+	</select>
+	
+	<div class='bottom-button-row'><button route-to='world' class='next-button'>Next</button></div>
+</div>
+
+<div route='world'>
+	[world goes here]
+	<div id='world'></div>
+	<div class='bottom-button-row'><button route-to='animal-weights' class='back-button'>Back</button></div>
+</div>
+
+<!------------- templates -------------------->
+<div class='template setup-animal'>
+
+	<div class='title'>
+		<button class='toggle-visibility square'><i class="fa fa-angle-double-down"></i></button>
+		<img src='images'>
+		<h2></h2>
+	</div>
+	
+	<div class='body'>
+		<div class='bit-blocks'></div>
+		<div class='date'>
+			<label>Date stopped eating</label>
+			<input type='date'>
+		</div>
+		<div class='total'></div>
+	</div>
+	
+	
+</div>
+
+<div class='template bits-block'>
+	<img class='type-image' src='.'> <span class='type'></span> x <span class='number'>0</span>
+	<div class='add-minus-buttons'>
+		<button class='config-amount minus square'><i class="fa fa-minus"></i></button>
+		<button class='config-amount plus square'><i class="fa fa-plus"></i></button>
+	</div>
+</div>
+
+</body>
+</html>
